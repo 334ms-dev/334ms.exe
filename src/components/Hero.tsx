@@ -15,12 +15,12 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center px-6 pt-10 relative overflow-hidden"
     >
       {/* Background Blobs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-white/[0.03] rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-white/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.02] rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-white/[0.08] rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-white/[0.1] rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/[0.05] rounded-full blur-[150px]" />
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl">
         {/* Minecraft Skin */}

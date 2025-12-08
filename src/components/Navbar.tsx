@@ -29,9 +29,9 @@ export default function Navbar() {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 border-b transition-[background-color,backdrop-filter] duration-300 ease-out ${
         mobileOpen
-          ? "bg-gray-950 border-transparent"
+          ? "bg-black border-transparent"
           : scrolled 
-            ? "bg-gray-950/90 backdrop-blur-xl border-white/[0.06]" 
+            ? "bg-black/90 backdrop-blur-xl border-white/[0.06]" 
             : "bg-transparent border-transparent"
       }`}
     >
@@ -90,7 +90,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden fixed inset-0 bg-gray-950 z-40"
+            className="md:hidden fixed inset-0 bg-black z-40"
           >
             {/* Close button */}
             <button

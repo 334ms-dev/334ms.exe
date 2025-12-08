@@ -39,8 +39,8 @@ export default function About() {
   return (
     <section id="about" className="py-32 px-6 relative overflow-hidden">
       {/* Background Blobs */}
-      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-white/[0.02] rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-white/[0.03] rounded-full blur-[120px]" />
+      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-white/[0.06] rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-white/[0.08] rounded-full blur-[120px]" />
       
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}
@@ -119,22 +119,39 @@ export default function About() {
           <span className="text-white/20 text-[10px] tracking-[0.2em] uppercase">
             Technologies I work with
           </span>
-          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 mt-8 max-w-2xl mx-auto">
-            {technologies.map((tech, i) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.6 + i * 0.05 }}
-                className="group p-4 bg-white/[0.02] border border-white/[0.05] hover:border-white/15 hover:bg-white/[0.04] transition-all flex flex-col items-center gap-3"
-              >
-                <tech.icon className="text-2xl text-white/40 group-hover:text-white/70 transition-colors" />
-                <span className="text-white/40 text-[9px] tracking-wider uppercase group-hover:text-white/60 transition-colors">
-                  {tech.name}
-                </span>
-              </motion.div>
-            ))}
+          
+          {/* Infinite scroll container */}
+          <div className="relative mt-8 overflow-hidden">
+            {/* Gradient masks */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10" />
+            
+            {/* Scrolling content */}
+            <motion.div
+              animate={{ x: [0, -1200] }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 25,
+                  ease: "linear",
+                },
+              }}
+              className="flex gap-4"
+            >
+              {/* Double the items for seamless loop */}
+              {[...technologies, ...technologies].map((tech, i) => (
+                <div
+                  key={`${tech.name}-${i}`}
+                  className="group flex-shrink-0 p-4 bg-white/[0.02] border border-white/[0.05] hover:border-white/15 hover:bg-white/[0.04] transition-all flex flex-col items-center gap-3 w-24"
+                >
+                  <tech.icon className="text-2xl text-white/40 group-hover:text-white/70 transition-colors" />
+                  <span className="text-white/40 text-[9px] tracking-wider uppercase group-hover:text-white/60 transition-colors whitespace-nowrap">
+                    {tech.name}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </motion.div>
       </div>

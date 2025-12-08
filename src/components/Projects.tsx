@@ -7,8 +7,8 @@ export default function Projects() {
   return (
     <section id="projects" className="py-32 px-6 relative overflow-hidden">
       {/* Background Blobs */}
-      <div className="absolute top-1/4 -left-20 w-72 h-72 bg-white/[0.02] rounded-full blur-[100px]" />
-      <div className="absolute bottom-1/3 -right-20 w-64 h-64 bg-white/[0.03] rounded-full blur-[80px]" />
+      <div className="absolute top-1/4 -left-20 w-72 h-72 bg-white/[0.06] rounded-full blur-[100px]" />
+      <div className="absolute bottom-1/3 -right-20 w-64 h-64 bg-white/[0.08] rounded-full blur-[80px]" />
       
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Section Header */}

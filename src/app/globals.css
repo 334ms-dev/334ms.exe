@@ -14,7 +14,7 @@
   --font-minecraft: "Minecraftia", monospace;
 
   /* Colors */
-  --color-background: #030712;
+  --color-background: #000000;
   --color-foreground: #fafafa;
   --color-muted: #a1a1aa;
   --color-accent: #3b82f6;
@@ -40,6 +40,7 @@ body {
 
 .font-minecraft {
   font-family: "Minecraftia", monospace !important;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 1), 4px 4px 8px rgba(0, 0, 0, 0.5) !important;
 }
 
 /* Text shadow for typography */

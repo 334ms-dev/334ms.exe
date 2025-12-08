@@ -9,7 +9,7 @@ const socials = [
   { name: "GitHub", icon: SiGithub, href: "https://github.com/334ms-dev", username: "@334ms-dev" },
   { name: "Discord", icon: SiDiscord, href: "https://discord.com/users/334ms.exe", username: "334ms.exe" },
   { name: "Twitter", icon: FaXTwitter, href: "https://x.com/334msDev", username: "@334msDev" },
-  { name: "Email", icon: Mail, href: "mailto:moshiur.munna055@gmail.com", username: "moshiur.munna055" },
+  { name: "Email", icon: Mail, href: "mailto:moshiur.munna055@gmail.com", username: "moshiur.munna055@gmail.com" },
 ];
 
 export default function Contact() {

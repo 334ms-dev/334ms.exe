@@ -103,14 +103,16 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
-        className="hidden md:block absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="hidden md:block absolute bottom-6 left-1/2 -translate-x-1/2"
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ArrowDown size={16} className="text-white/20" />
-        </motion.div>
+        <a href="#about">
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            <ArrowDown size={16} className="text-white/20 hover:text-white/40 transition-colors" />
+          </motion.div>
+        </a>
       </motion.div>
     </section>
   );

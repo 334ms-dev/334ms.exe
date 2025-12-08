@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 const MinecraftSkin = dynamic(() => import("./MinecraftSkin"), {
   ssr: false,
   loading: () => (
-    <div className="w-[300px] h-[420px] bg-white/5 animate-pulse" />
+    <div className="w-[200px] h-[280px] md:w-[280px] md:h-[380px] bg-white/5 animate-pulse" />
   ),
 });
 
@@ -28,13 +28,22 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8"
+          className="mb-6 md:mb-8"
         >
-          <MinecraftSkin
-            skinUrl="https://mc-heads.net/skin/334ms"
-            width={280}
-            height={380}
-          />
+          <div className="block md:hidden">
+            <MinecraftSkin
+              skinUrl="https://mc-heads.net/skin/334ms"
+              width={200}
+              height={280}
+            />
+          </div>
+          <div className="hidden md:block">
+            <MinecraftSkin
+              skinUrl="https://mc-heads.net/skin/334ms"
+              width={280}
+              height={380}
+            />
+          </div>
         </motion.div>
 
         {/* Name */}
@@ -52,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-white/40 text-sm md:text-base tracking-widest uppercase mb-8"
+          className="text-white/40 text-xs md:text-base tracking-widest uppercase mb-6 md:mb-8"
         >
           Developer & Creator
         </motion.p>
@@ -62,7 +71,7 @@ export default function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="w-16 h-px bg-white/20 mb-8"
+          className="w-16 h-px bg-white/20 mb-6 md:mb-8"
         />
 
         {/* Description */}
@@ -70,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-white/30 text-xs md:text-sm max-w-md leading-relaxed mb-12"
+          className="text-white/30 text-xs md:text-sm max-w-md leading-relaxed mb-8 md:mb-12 px-4"
         >
           Building digital experiences with clean code and creative solutions
         </motion.p>

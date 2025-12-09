@@ -120,13 +120,8 @@ function Navbar() {
             </button>
 
             <ul className="flex flex-col items-center justify-center h-full gap-10">
-              {navLinks.map((link, i) => (
-                <motion.li
-                  key={link.name}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
+              {navLinks.map((link) => (
+                <li key={link.name}>
                   <Link
                     href={link.href}
                     onClick={closeMenu}
@@ -134,7 +129,7 @@ function Navbar() {
                   >
                     {link.name}
                   </Link>
-                </motion.li>
+                </li>
               ))}
             </ul>
           </motion.div>
